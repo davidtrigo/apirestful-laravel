@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Seller;
 
 use App\Seller;
+use App\Http\Controllers\Controller;
 
 class SellerController extends Controller
 {
