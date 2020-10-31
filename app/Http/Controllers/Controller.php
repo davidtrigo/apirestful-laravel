@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-//use App\Traits\ApiResponser;
+use App\Traits\ApiResponser;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
