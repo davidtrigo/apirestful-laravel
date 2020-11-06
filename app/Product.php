@@ -2,15 +2,18 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Seller;
 use App\Buyer;
 use App\Transaction;
+use App\Http\Resources\ProductResource;
+use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     const AVAILABLE = 'available';
     const NOT_AVAILABLE='not available';
+
+    public $resource = ProductResource::class;
 
     protected $fillable=[
          'name',
@@ -20,6 +23,9 @@ class Product extends Model
          'seller_id',
     ];
 
+    protected $hidden = [
+        'pivot',
+    ];
 
     public function seller()
     {

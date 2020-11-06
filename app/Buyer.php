@@ -1,11 +1,18 @@
 <?php
 
 namespace App;
-
+use App\Transaction;
 use App\Scopes\BuyerScope;
+use App\Http\Resources\BuyerResource;
 
 class Buyer extends User
 {
+    public $resource = BuyerResource::class;
+
+    protected $hidden = [
+        'password', 'remember_token', 'email',
+    ];
+
 
     protected static function boot()
     {
